@@ -135,7 +135,7 @@ if categorical_features:
 # We choose Linear Regression model, but feel free to try your own and compare the results.
 
 # Creating a Linear regression model and training it
-model = ElasticNet()
+model = ElasticNet(l1_ratio=1e-3, alpha=1e-1)
 model.fit(df, target)
 
 # BEGIN
